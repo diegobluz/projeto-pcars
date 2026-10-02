@@ -1,4 +1,4 @@
-package com.projectcars.main;
+package com.projectcars.main.securityconfig.appsec;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class SecurityConfig {
+public class AppSec {
 
     @Bean
     public SecurityFilterChain securityFilterChain(
@@ -37,12 +37,12 @@ public class SecurityConfig {
             PasswordEncoder passwordEncoder) {
 
         UserDetails admin = User.withUsername("admin")
-            .password(passwordEncoder.encode("TroqueEstaSenha123!"))
+            .password(passwordEncoder.encode("Impossiblethefast101@"))
             .roles("ADMIN")
             .build();
 
         UserDetails consulta = User.withUsername("consulta")
-            .password(passwordEncoder.encode("TroqueConsulta123!"))
+            .password(passwordEncoder.encode("Vendas2026!"))
             .roles("CONSULTA")
             .build();
 
