@@ -1,37 +1,163 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#15171c" />
+        <title>PCars | Gestão de Concessionária</title>
+        <link rel="stylesheet" th:href="@{/style.css}" />
+    </head>
+    <body>
+        <div class="app-shell">
+            <aside class="sidebar">
+                <a class="brand" th:href="@{/}">
+                    <span class="brand-mark">P</span>
+                    <span>PCars<small>GESTÃO AUTOMOTIVA</small></span>
+                </a>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link th:rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
-  <title>PCars Project</title>
-</head>
+                <p class="menu-label">MENU PRINCIPAL</p>
 
-<div class="banner">
-  <img th:src="@{/images/PCars1.png}">
-  <header>
-    <h1>PCars Project</h1>
-  </header>
-</div>
+                <nav class="side-nav">
+                    <a class="nav-link active" th:href="@{/}">
+                        <span class="nav-icon">⌂</span> Visão geral
+                    </a>
+                    <a class="nav-link" th:href="@{/cadastro-clientes}">
+                        <span class="nav-icon">♙</span> Clientes
+                    </a>
+                    <a class="nav-link" th:href="@{/cadastro-veiculos}">
+                        <span class="nav-icon">▣</span> Veículos
+                    </a>
+                    <a class="nav-link" th:href="@{/registro-vendas}">
+                        <span class="nav-icon">↗</span> Vendas
+                    </a>
+                    <a class="nav-link" th:href="@{/lista}">
+                        <span class="nav-icon">☷</span> Listagens
+                    </a>
+                </nav>
 
-<nav>
-  <ul>
-    <li><a th:href="@{/cadastro-clientes}">Cadastro de Clientes</a></li>
-    <li><a th:href="@{/cadastro-veiculos}">Cadastro de Veículos</a></li>
-    <li><a th:href="@{/registro-vendas}">Registro de Vendas</a></li>
-    <li><a th:href="@{/lista}">Listas</a></li>
-  </ul>
-</nav>
+                <div class="sidebar-bottom">
+                    <span class="status-dot"></span>
+                    Sistema PCars
+                    <small>Ambiente administrativo</small>
+                </div>
+            </aside>
 
-<footer>
-  <p>&copy; 2023 PCars Project. Todos os direitos reservados.</p>
-</footer>
+            <main class="main-content">
+                <header class="topbar">
+                    <div>
+                        <span class="eyebrow">PAINEL ADMINISTRATIVO</span>
+                        <h1>Visão geral</h1>
+                    </div>
+                    <div class="topbar-right">
+                        <span class="system-badge">
+                            <span class="status-dot"></span> Sistema
+                        </span>
+                    </div>
+                </header>
 
+                <section class="welcome-card">
+                    <div class="welcome-copy">
+                        <span class="eyebrow light">BEM-VINDO AO PCARS</span>
+                        <h2>Gestão simples.<br />Negócios em movimento.</h2>
+                        <p>
+                            Gerencie os cadastros e acompanhe as operações da
+                            sua concessionária em um só lugar.
+                        </p>
+                        <a
+                            class="button button-light"
+                            th:href="@{/cadastro-veiculos}"
+                        >
+                            Cadastrar veículo <span>→</span>
+                        </a>
+                    </div>
+                    <div class="welcome-art" aria-hidden="true">
+                        <span class="art-circle"></span>
+                        <span class="art-car">P</span>
+                    </div>
+                </section>
 
+                <section class="section-block">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Acesso rápido</h2>
+                            <p>Escolha a operação que deseja realizar.</p>
+                        </div>
+                    </div>
 
+                    <div class="quick-grid">
+                        <a class="quick-card" th:href="@{/cadastro-clientes}">
+                            <span class="quick-icon icon-red">♙</span>
+                            <span class="quick-title">Clientes</span>
+                            <span class="quick-description"
+                                >Cadastrar e manter os dados dos clientes.</span
+                            >
+                            <span class="quick-action"
+                                >Abrir cadastro <b>→</b></span
+                            >
+                        </a>
 
+                        <a class="quick-card" th:href="@{/cadastro-veiculos}">
+                            <span class="quick-icon icon-blue">▣</span>
+                            <span class="quick-title">Veículos</span>
+                            <span class="quick-description"
+                                >Registrar modelos, marcas e valores.</span
+                            >
+                            <span class="quick-action"
+                                >Abrir cadastro <b>→</b></span
+                            >
+                        </a>
 
-</body>
+                        <a class="quick-card" th:href="@{/registro-vendas}">
+                            <span class="quick-icon icon-green">↗</span>
+                            <span class="quick-title">Vendas</span>
+                            <span class="quick-description"
+                                >Registrar as vendas da concessionária.</span
+                            >
+                            <span class="quick-action"
+                                >Registrar venda <b>→</b></span
+                            >
+                        </a>
 
+                        <a class="quick-card" th:href="@{/lista}">
+                            <span class="quick-icon icon-purple">☷</span>
+                            <span class="quick-title">Listagens</span>
+                            <span class="quick-description"
+                                >Consultar os registros disponíveis.</span
+                            >
+                            <span class="quick-action"
+                                >Consultar dados <b>→</b></span
+                            >
+                        </a>
+                    </div>
+                </section>
+
+                <section class="section-block workflow-card">
+                    <div>
+                        <span class="eyebrow">FLUXO DE TRABALHO</span>
+                        <h2>Como começar?</h2>
+                        <p>
+                            Organize as informações antes de registrar uma
+                            venda.
+                        </p>
+                    </div>
+                    <div class="workflow-steps">
+                        <a th:href="@{/cadastro-clientes}">
+                            <span>01</span> Cadastre o cliente <b>→</b>
+                        </a>
+                        <a th:href="@{/cadastro-veiculos}">
+                            <span>02</span> Cadastre o veículo <b>→</b>
+                        </a>
+                        <a th:href="@{/registro-vendas}">
+                            <span>03</span> Registre a venda <b>→</b>
+                        </a>
+                    </div>
+                </section>
+
+                <footer class="footer">
+                    <span>PCars Project</span>
+                    <span>Gestão de concessionária</span>
+                </footer>
+            </main>
+        </div>
+    </body>
 </html>
