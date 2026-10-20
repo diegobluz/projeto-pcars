@@ -21,5 +21,5 @@ public class Veiculo {
     private String placa;
     private String marca;
     private String valor;
-
+    private String disponibilidade;
 }
