@@ -37,7 +37,7 @@ public class AppSec {
             PasswordEncoder passwordEncoder) {
 
         UserDetails admin = User.withUsername("admin")
-            .password(passwordEncoder.encode("Impossiblethefast101@"))
+            .password(passwordEncoder.encode("Insert user here"))
             .roles("ADMIN")
             .build();
 
