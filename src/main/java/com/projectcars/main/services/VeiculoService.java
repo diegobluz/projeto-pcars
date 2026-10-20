@@ -33,6 +33,8 @@ public class VeiculoService {
         veiculoExistente.setPlaca(veiculo.getPlaca());
         veiculoExistente.setMarca(veiculo.getMarca());
         veiculoExistente.setValor(veiculo.getValor());
+
+veiculoExistente.setDisponibilidade(veiculo.getDisponibilidade());
         veiculoRepository.save(veiculoExistente);
         return veiculoExistente;
     }
